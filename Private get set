@@ -1,0 +1,49 @@
+class Pessoa
+    {
+        private String nome;
+        private int idade;
+        private char sexo;
+
+        public void setNome (String nome)
+        {
+            this.nome = nome;
+        }
+
+        public String getNome ()
+        {
+            return (this.nome);
+        }
+
+        // get e set idade
+        public void setIdade (int idade) { this.idade = idade;  }
+        public int getIdade () { return this.idade; }
+
+        // get e set sexo
+        public void setSexo(char sexo) { this.sexo = sexo; }
+        public int getSexo() { return this.sexo; }
+    }
+    ////////////////////////////////////////////////////////////////
+    static void Main(string[] args)
+        {
+            Pessoa p1 = new Pessoa();
+            Pessoa p2 = new Pessoa();
+            Pessoa p3 = new Pessoa();
+
+            p1.nome = "Ana";
+            p2.nome = "Paulo";
+            p3.nome = "Lia";
+
+            p1.idade = 23;
+            p2.idade = 35;
+            p3.idade = 12;
+
+            p1.sexo = 'F';
+            p2.sexo = 'M';
+            p3.sexo = 'F';
+
+            Console.WriteLine(p1.nome + " " + p1.idade + " " + p1.sexo);
+            Console.WriteLine(p2.nome + " " + p2.idade + " " + p2.sexo);
+            Console.WriteLine(p3.nome + " " + p3.idade + " " + p3.sexo);
+
+            Console.ReadKey();
+        }
