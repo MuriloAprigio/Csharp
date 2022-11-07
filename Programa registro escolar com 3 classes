@@ -1,0 +1,44 @@
+class Aluno : Pessoa
+    {
+        private int matricula;
+
+        public Aluno(string nome, string cpf, int matricula) : base ( nome,  cpf)
+        {
+           
+            this.matricula = matricula;
+        }
+
+        public int getMatricula ()
+        {
+            return this.matricula;
+        }
+    }
+    ///////////////////////////////////////////////////////////////
+    class Pessoa
+    {
+        private string nome;
+        private string cpf;
+        public Pessoa(string nome, string cpf)
+        {
+            this.nome = nome;
+            this.cpf = cpf;
+        }
+        public string getNome()
+        {
+            return this.nome;
+        }
+
+        public string getCpf()
+        {
+            return this.cpf;
+        }
+    }
+    ///////////////////////////////////////////////////////////
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Aluno a1 = new Aluno("Ana", "2345", 123);
+            Console.WriteLine(a1.getNome()+ " " + a1.getCpf() + " " + a1.getMatricula());
+        }
+    }
