@@ -1,0 +1,55 @@
+class Program
+    {
+        static void Main(string[] args)
+        {
+            Aluno a1 = new Aluno();
+            a1.setNome("Zé");
+            a1.setMatricula(234);
+            a1.setEmail("ze@gmail.com");
+
+            Aluno a2 = new Aluno("Ana");
+            a2.setMatricula(789);
+            a2.setEmail("ana@xy.com");
+
+            Aluno a3 = new Aluno("Paulo",989,"paulo@ig.com");
+
+            a1.imprimir();
+            a2.imprimir();
+            a3.imprimir();
+
+            Console.ReadKey();
+        }
+    }
+    ////////////////////////////////////////////////////////////
+    class Aluno
+    {
+        private string nome;
+        private int matricula;
+        public string email;
+
+        public Aluno (string nome)
+        {
+            this.nome = nome;
+        }
+
+        public Aluno()
+        {
+        }
+
+        public Aluno (string nome, int matricula, string email)
+        {
+            this.nome = nome;
+            this.matricula = matricula;
+            this.email = email;
+        }
+
+///////////////////////////////////////////////////////////////////
+        public string getNome ()
+        {
+            return this.nome;
+        }
+
+        public void setNome (string nome)
+        {
+            this.nome = nome;
+        }
