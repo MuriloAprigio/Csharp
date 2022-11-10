@@ -1,0 +1,112 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Funcionario
+    {
+        private string nome;
+        private int matricula;
+        private double salario;
+
+
+        public Funcionario(string nome, int matricula, float salario)
+        {
+            this.nome = nome;
+            this.matricula = matricula;
+            this.salario = salario;
+        }
+
+        public Funcionario()
+        {
+        }
+
+        public void setNome(String nome)
+        {
+            this.nome = nome;
+        }
+
+        public String getNome()
+        {
+            return (this.nome);
+        }
+
+
+        //get e set matricula
+        public void setMatricula(int matricula) { this.matricula = matricula; }
+        public int getMatricula() { return this.matricula; }
+
+        // get e set salario
+        public void setSalario(double salario) { this.salario = salario; }
+        public double getSalario() { return this.salario; }
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class Program
+    {
+
+
+        static void Main(string[] args)
+        {
+
+            double media1, soma1;
+
+            media1 = (4.000 + 5.000 + 6.000 + 7.000);
+            soma1 = media1 / 4;
+
+            Console.Write("Media Salarial= \r\n " + soma1);
+            Console.Write(" \r\nOs funcionarios Andreas, Miguel recebem um salário acima da média ");
+
+
+
+            Funcionario p1 = new Funcionario(“Aprigio”, 18,’M’);
+            Funcionario p2 = new Funcionario("Marcelo", 23, 'M');
+            Funcionario p3 = new Funcionario("Andreas", 23, 'M');
+            Funcionario p4 = new Funcionario("Miguel", 23, 'M');
+
+            p1.setNome(“Aprigio");
+            p2.setNome("Marcelo");
+            p3.setNome("Andreas");
+            p4.setNome("Miguel");
+
+            p1.setMatricula(351455);
+            p2.setMatricula(385455);
+            p3.setMatricula(144582);
+            p4.setMatricula(100232);
+
+            p1.setSalario(4.000);
+            p2.setSalario(5.000);
+            p3.setSalario(6.000);
+            p4.setSalario(7.000);
+
+            Console.WriteLine(p1.getNome() + "A matrícula é: " + p1.getMatricula() + "  O salário é: " + p1.getSalario());
+            Console.WriteLine(p2.getNome() + "A matrícula é: " + p2.getMatricula() + "  O salário é: " + p2.getSalario());
+            Console.WriteLine(p3.getNome() + "A matrícula é: " + p3.getMatricula() + "  O salário é: " + p3.getSalario());
+            Console.WriteLine(p4.getNome() + "A matrícula é: " + p4.getMatricula() + "  O salário é: " + p4.getSalario());
+
+            Console.ReadKey();
+
+            
+
+          
+        }
+       
+       
+
+
+    }
+}
+
+
