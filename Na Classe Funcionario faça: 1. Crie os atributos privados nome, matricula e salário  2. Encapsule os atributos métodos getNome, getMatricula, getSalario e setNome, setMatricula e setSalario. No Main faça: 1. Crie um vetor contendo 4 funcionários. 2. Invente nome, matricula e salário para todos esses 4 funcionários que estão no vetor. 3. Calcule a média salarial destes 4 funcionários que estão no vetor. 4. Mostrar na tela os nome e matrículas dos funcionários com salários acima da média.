@@ -1,0 +1,42 @@
+class Program
+{
+
+static void Main(string[] args)
+{
+double media1, soma1;
+media1 = (900 + 1500 + 48000 + 1000000);
+soma1 = media1 / 4;
+Console.Write(&quot;Media Salarial= \r\n &quot; + soma1);
+Console.Write(&quot; \r\nOs funcionarios Isaac, Bruna e Matheus recebem um salário
+acima da média &quot;);
+
+Funcionario p1 = new Funcionario(&quot;neymar&quot;, 25, &#39;M&#39;);
+Funcionario p2 = new Funcionario(&quot;Isaac&quot;, 23, &#39;F&#39;);
+Funcionario p3 = new Funcionario(&quot;pele&quot;, 23, &#39;F&#39;);
+Funcionario p4 = new Funcionario(&quot;ronaldo&quot;, 23, &#39;F&#39;);
+p1.setNome(&quot;\r\nneymar&quot;);
+p2.setNome(&quot;Isaac&quot;);
+p3.setNome(&quot;pele&quot;);
+p4.setNome(&quot;ronaldo&quot;);
+p1.setMatricula(8519);
+p2.setMatricula(5913);
+p3.setMatricula(6969);
+p4.setMatricula(2424);
+p1.setSalario(900);
+p2.setSalario(1500);
+p3.setSalario(48000);
+p4.setSalario(1000000);
+Console.WriteLine(p1.getNome() + &quot;A matrícula é: &quot; + p1.getMatricula() + &quot; O salário
+é: &quot; + p1.getSalario());
+Console.WriteLine(p2.getNome() + &quot;A matrícula é: &quot; + p2.getMatricula() + &quot; O salário
+é: &quot; + p2.getSalario());
+Console.WriteLine(p3.getNome() + &quot;A matrícula é: &quot; + p3.getMatricula() + &quot; O salário
+é: &quot; + p3.getSalario());
+Console.WriteLine(p4.getNome() + &quot;A matrícula é: &quot; + p4.getMatricula() + &quot; O salário
+é: &quot; + p4.getSalario());
+Console.ReadKey();
+
+}
+
+}
+}
